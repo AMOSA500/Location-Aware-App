@@ -11,18 +11,33 @@ import SwiftData
 struct MortgageMainView: View {
 // your vars here - use types mapped to the function so only use string for Lender
     @Environment(\.modelContext) private var modelContext
+    @State private var lender = ""
+    @State private var amount = ""
+    @State private var interest = ""
+    @State private var period = ""
     
     var body: some View {
         
         VStack{
-            Text("Mortgage Calculator")
-            //your code here for main UI
-            //pattern is:
-            //labels and textfields
-            //button
-            //payment output
-            //hint: use this for non-text var  TextField("Enter amount", value: $amount, format: .number)
-        }
+            Label("", systemImage: "sterlingsign.bank.building")
+            Text("Mortgage Calculator").font(.system(size: 24)).bold()
+            
+            InputView(value: $lender, label: "Lender", symbol: "house.fill", placeholder: "none", isNumberField: false)
+            
+            InputView(value: $amount, label: "Amount", symbol: "sterlingsign", placeholder: "0", isNumberField: true)
+            
+            InputView(value: $interest, label: "Interest", symbol: "percent", placeholder: "0", isNumberField: true)
+            
+            InputView(value: $period, label: "Period (years)", symbol: "calendar", placeholder: "0", isNumberField: true)
+            
+            ZStack{
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(maxWidth: .infinity, maxHeight: 50)
+                    .foregroundColor(Color.blue)
+                Text("Calculate Payment").font(.system(size: 14)).foregroundColor(Color.white)
+            }.padding(.top,20)
+        }.padding()
+        
         //    }
 
                 
@@ -66,5 +81,5 @@ struct MortgageMainView: View {
 }
 
 #Preview {
-    MortgageMainView()
+    MainTabView()
 }
