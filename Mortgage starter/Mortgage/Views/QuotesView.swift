@@ -14,9 +14,23 @@ struct QuotesView: View {
     
     var body: some View {
         VStack{
-                        Text("Quotes List")
+            Text("Quotes List")
             //your List here
             //            List(quotes){quote in ...
+            NavigationStack{
+                List(quotes){ quote in
+                    Form{
+                        VStack{
+                            HStack{
+                                    Label("", systemImage: "house.fill").frame(width: 20)
+                                    Text("Lender ")
+                                Text(quote.lender).bold().font(.system(size: 18))
+                                }.frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.bottom, 2)
+                        }.padding()
+                    }
+                }
+            }
             
         }
     }
