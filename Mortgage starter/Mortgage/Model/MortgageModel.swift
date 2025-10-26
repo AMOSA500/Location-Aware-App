@@ -12,17 +12,24 @@ import SwiftData
 class MortgageModel : Identifiable{
     //hint - map to Published vars on view for easy saving
     //you vars here
-    var id = UUID()
     var lender:String
     var amount: Double
     var interest: Double
     var period: Int
+    var payment: Double
 
-    init(lender: String, amount: Double, interest: Double, period: Int) {
+    init(
+        lender: String,
+        amount: Double,
+        interest: Double,
+        period: Int,
+        payment: Double
+    ) {
         self.lender = lender
         self.amount = amount
         self.interest = interest
         self.period = period
+        self.payment = payment
     }
 }
 

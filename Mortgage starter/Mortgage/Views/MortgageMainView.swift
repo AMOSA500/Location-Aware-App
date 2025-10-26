@@ -112,7 +112,7 @@ struct MortgageMainView: View {
     
     //function for button
     func calculateMortgage() {
-        guard !lender.isEmpty,
+        guard lender.lowercased() != "none",
               let newAmount = Double(amount),
               let interestPercent = Double(interest),
               let periodYears = Int(period),
@@ -145,9 +145,16 @@ struct MortgageMainView: View {
          //save quote - your code here
          //create and insert a model
          //finished so hide the keyboard
-        let newMortgage = MortgageModel(lender: lender, amount: newAmount, interest: interestPercent, period: periodYears);
+        let newMortgage = MortgageModel(
+            lender: lender,
+            amount: newAmount,
+            interest: interestPercent,
+            period: periodYears,
+            payment: payment
+        );
         
         modelContext.insert(newMortgage)
+        try? modelContext.save()
          hideKeyboard()
          }
          

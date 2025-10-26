@@ -14,11 +14,11 @@ struct MainTabView: View {
             Group{
                 MortgageMainView()
                     .tabItem{
-                        Label("Mortgage", systemImage: "sterlingsign.bank.building")
+                        Label("Mortgage", systemImage: "sterlingsign")
                     }
                 QuotesView()
                     .tabItem{
-                        Label("Mortgage", systemImage: "calendar")
+                        Label("History", systemImage: "calendar")
                     }
             }
             //first view here
