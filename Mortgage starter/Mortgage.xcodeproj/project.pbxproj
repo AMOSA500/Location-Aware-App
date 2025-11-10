@@ -64,7 +64,6 @@
 				576C33DD2CBD396200A4D3A6 /* MortgageApp.swift */,
 				576C33E32CBD396600A4D3A6 /* Assets.xcassets */,
 				576C33E52CBD396600A4D3A6 /* Preview Content */,
-				576C33EF2CBD799800A4D3A6 /* MainTabView.swift */,
 			);
 			path = Mortgage;
 			sourceTree = "<group>";
@@ -91,6 +90,7 @@
 				576C33ED2CBD3DEC00A4D3A6 /* MortgageMainView.swift */,
 				576C33DF2CBD396200A4D3A6 /* QuotesView.swift */,
 				37A938142EAA71DE0022EC00 /* InputView.swift */,
+				576C33EF2CBD799800A4D3A6 /* MainTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

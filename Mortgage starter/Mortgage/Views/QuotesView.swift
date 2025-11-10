@@ -62,7 +62,7 @@ struct QuotesView: View {
                                     }.frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.bottom, 2)
                             }.padding()
-                        
+                            
                     }
 
                 }

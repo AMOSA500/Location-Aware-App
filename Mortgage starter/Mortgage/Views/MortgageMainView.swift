@@ -11,7 +11,7 @@ import SwiftData
 struct MortgageMainView: View {
     // your vars here - use types mapped to the function so only use string for Lender
     @Environment(\.modelContext) private var modelContext
-    @State private var mortgageModelArray: [MortgageModel] = []
+//    @State private var mortgageModelArray: [MortgageModel] = []
     @AppStorage("lender") private var lender = "None"
     @AppStorage("amount") private var amount = "300000"
     @AppStorage("interest") private var interest = "4"
@@ -20,7 +20,6 @@ struct MortgageMainView: View {
     @State var statusMessage = ""
     @State var payment: Double = 0.0
     let ukTopBanks: [String] = [
-        "None",
         "HSBC",
         "Barclays",
         "Lloyds Bank",
@@ -43,18 +42,24 @@ struct MortgageMainView: View {
                     .foregroundColor(Color.blue)
                     .rotationEffect(Angle(degrees: 15))
                 VStack{
-                    Text("🏦 Mortgage Calculator").font(.system(size: 24)).bold()
+                    Image(systemName: "lirasign.bank.building.fill").font(.system(size: 50)).foregroundColor(.white).padding(.top,10)
+                    Text("Mortgage")
+                        .font(.system(size: 52))
+                        .bold()
+                        .foregroundColor(.white)
+                    Text("Calculator").font(.system(size: 32))
+
                 }
                 
                 
             }.frame(width: UIScreen.main.bounds.width * 3, height: 350)
-                .offset(y: -120)
+                .offset(y: -110)
             Divider()
             HStack(alignment: .center, spacing: 20){
                 Label("Lender", systemImage: "house.fill").frame(width: 150, alignment: .leading)
                 Picker("Select a lender", selection: $lender){
                     ForEach(ukTopBanks, id: \.self){ bank in
-                        Text(bank)
+                        Text(bank).tag(bank)
                     }
                 }.pickerStyle(.menu)
                     .padding(.horizontal, 10)
