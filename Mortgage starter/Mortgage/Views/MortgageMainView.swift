@@ -37,23 +37,7 @@ struct MortgageMainView: View {
         
         
         VStack{
-            ZStack{
-                RoundedRectangle(cornerRadius: 0)
-                    .foregroundColor(Color.blue)
-                    .rotationEffect(Angle(degrees: 15))
-                VStack{
-                    Image(systemName: "lirasign.bank.building.fill").font(.system(size: 50)).foregroundColor(.white).padding(.top,10)
-                    Text("Mortgage")
-                        .font(.system(size: 52))
-                        .bold()
-                        .foregroundColor(.white)
-                    Text("Calculator").font(.system(size: 32))
-
-                }
-                
-                
-            }.frame(width: UIScreen.main.bounds.width * 3, height: 350)
-                .offset(y: -110)
+            headerView()
             Divider()
             HStack(alignment: .center, spacing: 20){
                 Label("Lender", systemImage: "house.fill").frame(width: 150, alignment: .leading)
@@ -70,7 +54,7 @@ struct MortgageMainView: View {
                     
             }
             
-//            InputView(value: $lender, label: "Lender", symbol: "house.fill", placeholder: "none", isNumberField: false)
+//          InputView(value: $lender, label: "Lender", symbol: "house.fill", placeholder: "none", isNumberField: false)
             
             InputView(value: $amount, label: "Amount", symbol: "sterlingsign", placeholder: "300000", isNumberField: true)
             
@@ -114,6 +98,30 @@ struct MortgageMainView: View {
         
     }
     //uncomment this function when ready
+    
+    @ViewBuilder
+    func headerView() -> some View {
+        ZStack{
+            RoundedRectangle(cornerRadius: 0)
+                .foregroundColor(Color.red)
+                .rotationEffect(Angle(degrees: -15))
+            RoundedRectangle(cornerRadius: 0)
+                .foregroundColor(Color.blue)
+                .rotationEffect(Angle(degrees: 15))
+            VStack{
+                Image(systemName: "lirasign.bank.building.fill").font(.system(size: 50)).foregroundColor(.white).padding(.top,10)
+                Text("Mortgage")
+                    .font(.system(size: 52))
+                    .bold()
+                    .foregroundColor(.white)
+                Text("Calculator").font(.system(size: 32))
+
+            }
+            
+            
+        }.frame(width: UIScreen.main.bounds.width * 3, height: 350)
+            .offset(y: -110)
+    }
     
     //function for button
     func calculateMortgage() {

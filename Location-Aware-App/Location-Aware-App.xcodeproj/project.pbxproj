@@ -15,22 +15,23 @@
 		37A937EC2EAA60080022EC00 /* Location-Aware-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Location-Aware-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A937FA2EAA61830022EC00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37A937FC2EAA61830022EC00 /* Location_Aware_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_Aware_AppApp.swift; sourceTree = "<group>"; };
+		3DC25D0C2ECF4D56009F2AF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		37A938012EAA61870022EC00 /* Model */ = {
+		37A938032EAA61970022EC00 /* View */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DC25D0D2ECF4EF3009F2AF9 /* Model */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Model;
 			sourceTree = "<group>";
 		};
-		37A938022EAA61900022EC00 /* ViewModel */ = {
+		3DC25D0E2ECF4F0A009F2AF9 /* ViewModel */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		37A938032EAA61970022EC00 /* View */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -65,9 +66,10 @@
 		37A937FD2EAA61830022EC00 /* Location-Aware-App */ = {
 			isa = PBXGroup;
 			children = (
+				3DC25D0E2ECF4F0A009F2AF9 /* ViewModel */,
+				3DC25D0D2ECF4EF3009F2AF9 /* Model */,
+				3DC25D0C2ECF4D56009F2AF9 /* Info.plist */,
 				37A938032EAA61970022EC00 /* View */,
-				37A938022EAA61900022EC00 /* ViewModel */,
-				37A938012EAA61870022EC00 /* Model */,
 				37A937FA2EAA61830022EC00 /* Assets.xcassets */,
 				37A937FC2EAA61830022EC00 /* Location_Aware_AppApp.swift */,
 			);
@@ -90,9 +92,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				37A938012EAA61870022EC00 /* Model */,
-				37A938022EAA61900022EC00 /* ViewModel */,
 				37A938032EAA61970022EC00 /* View */,
+				3DC25D0D2ECF4EF3009F2AF9 /* Model */,
+				3DC25D0E2ECF4F0A009F2AF9 /* ViewModel */,
 			);
 			name = "Location-Aware-App";
 			packageProductDependencies = (
@@ -286,6 +288,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Location-Aware-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -313,6 +316,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Location-Aware-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,10 @@
 		576C33EF2CBD799800A4D3A6 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		57C3BDFE2CBFEF26001724E4 /* MortgageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3D2146D52EC16E0300F65108 /* ViewModel */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModel; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		576C33D72CBD396200A4D3A6 /* Frameworks */ = {
@@ -59,6 +63,7 @@
 		576C33DC2CBD396200A4D3A6 /* Mortgage */ = {
 			isa = PBXGroup;
 			children = (
+				3D2146D52EC16E0300F65108 /* ViewModel */,
 				57BF83EC2EA79FBA0070CA0B /* Views */,
 				57BF83EB2EA79FAA0070CA0B /* Model */,
 				576C33DD2CBD396200A4D3A6 /* MortgageApp.swift */,
@@ -109,6 +114,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3D2146D52EC16E0300F65108 /* ViewModel */,
 			);
 			name = Mortgage;
 			productName = Mortgage;
